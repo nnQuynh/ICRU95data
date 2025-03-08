@@ -120,7 +120,7 @@ Table_A_4_1_1b.rename(columns={Table_A_4_1_1b.columns[0]: 'E_keV',
                                Table_A_4_1_1b.columns[5]: 'dskin_slab_60',
                                Table_A_4_1_1b.columns[6]: 'dskin_slab_75',
                              }, inplace=True)
-Table_A_4_1_1b[['E_keV']] = Table_A_4_1b[['E_keV']].astype('float64')
+Table_A_4_1_1b[['E_keV']] = Table_A_4_1_1b[['E_keV']].astype('float64')
 Table_A_4_1_1b.to_csv('./data/Table_A_4_1_1b_photon_kerma_dskin_slab.csv', index=False) 
   
 
