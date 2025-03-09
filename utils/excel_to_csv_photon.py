@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 excel_photon = './data/ICRU95 - data - Photon.xlsx'
 
 # h* - fluence
@@ -272,7 +271,7 @@ Table_A_5_2a.rename(columns={Table_A_5_2a.columns[0]: 'E_keV',
                              Table_A_5_2a.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
 Table_A_5_2a[['E_keV']] = Table_A_5_2a[['E_keV']].astype('float64')
-Table_A_5_2a.to_csv('./data/Table_A_2_2a_photon_fluence_hp_kermaapprox.csv', index=False) 
+Table_A_5_2a.to_csv('./data/Table_A_5_2a_photon_fluence_hp_kermaapprox.csv', index=False) 
 
 # hp - kerma - kermaapprox
 Table_A_5_2b = pd.read_excel(excel_photon, sheet_name='A.5.2a-b', skiprows = 2, usecols = 'C:O')
@@ -292,4 +291,183 @@ Table_A_5_2b.rename(columns={Table_A_5_2b.columns[0]: 'E_keV',
                              Table_A_5_2b.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
 Table_A_5_2b[['E_keV']] = Table_A_5_2b[['E_keV']].astype('float64')
-Table_A_5_2b.to_csv('./data/Table_A_2_2b_photon_kerma_hp_kermaapprox.csv', index=False) 
+Table_A_5_2b.to_csv('./data/Table_A_5_2b_photon_kerma_hp_kermaapprox.csv', index=False) 
+
+# dlens - fluence - kermaapprox
+Table_A_5_3a = pd.read_excel(excel_photon, sheet_name='A.5.3a-b', skiprows = 2, usecols = 'C:K')
+Table_A_5_3a.dropna(inplace=True)
+Table_A_5_3a.rename(columns={Table_A_5_3a.columns[0]: 'E_keV', 
+                             Table_A_5_3a.columns[1]: 'dlens_0_pGy.cm2',
+                             Table_A_5_3a.columns[2]: 'dlens_15',
+                             Table_A_5_3a.columns[3]: 'dlens_30',
+                             Table_A_5_3a.columns[4]: 'dlens_45',
+                             Table_A_5_3a.columns[5]: 'dlens_60',
+                             Table_A_5_3a.columns[6]: 'dlens_75',
+                             Table_A_5_3a.columns[7]: 'dlens_90',
+                             Table_A_5_3a.columns[8]: 'dlens_ROT',
+                             }, inplace=True)
+Table_A_5_3a[['E_keV']] = Table_A_5_3a[['E_keV']].astype('float64')
+Table_A_5_3a.to_csv('./data/Table_A_5_3a_photon_fluence_dlens_kermaapprox.csv', index=False) 
+
+# dlens - kerma - kermaapprox
+Table_A_5_3b = pd.read_excel(excel_photon, sheet_name='A.5.3a-b', skiprows = 2, usecols = 'O:W')
+Table_A_5_3b.dropna(inplace=True)
+Table_A_5_3b.rename(columns={Table_A_5_3b.columns[0]: 'E_keV', 
+                             Table_A_5_3b.columns[1]: 'dlens_0_Sv/Gy',
+                             Table_A_5_3b.columns[2]: 'dlens_15',
+                             Table_A_5_3b.columns[3]: 'dlens_30',
+                             Table_A_5_3b.columns[4]: 'dlens_45',
+                             Table_A_5_3b.columns[5]: 'dlens_60',
+                             Table_A_5_3b.columns[6]: 'dlens_75',
+                             Table_A_5_3b.columns[7]: 'dlens_90',
+                             Table_A_5_3b.columns[8]: 'dlens_ROT',
+                             }, inplace=True)
+Table_A_5_3b[['E_keV']] = Table_A_5_3b[['E_keV']].astype('float64')
+Table_A_5_3b.to_csv('./data/Table_A_5_3b_photon_kerma_dlens_kermaapprox.csv', index=False) 
+
+# dskin_slab - fluence - kermaapprox
+Table_A_5_4_1a = pd.read_excel(excel_photon, sheet_name='A.5.4.1a-b', skiprows = 2, usecols = 'C:I')
+Table_A_5_4_1a.dropna(inplace=True)
+Table_A_5_4_1a.rename(columns={Table_A_5_4_1a.columns[0]: 'E_keV', 
+                               Table_A_5_4_1a.columns[1]: 'dskin_slab_0_pGy.cm2',
+                               Table_A_5_4_1a.columns[2]: 'dskin_slab_15',
+                               Table_A_5_4_1a.columns[3]: 'dskin_slab_30',
+                               Table_A_5_4_1a.columns[4]: 'dskin_slab_45',
+                               Table_A_5_4_1a.columns[5]: 'dskin_slab_60',
+                               Table_A_5_4_1a.columns[6]: 'dskin_slab_75',
+                             }, inplace=True)
+Table_A_5_4_1a[['E_keV']] = Table_A_5_4_1a[['E_keV']].astype('float64')
+Table_A_5_4_1a.to_csv('./data/Table_A_5_4_1a_photon_fluence_dskin_slab_kermaapprox.csv', index=False) 
+
+# dskin_slab - kerma - kermaapprox
+Table_A_5_4_1b = pd.read_excel(excel_photon, sheet_name='A.5.4.1a-b', skiprows = 2, usecols = 'M:S')
+Table_A_5_4_1b.dropna(inplace=True)
+Table_A_5_4_1b.rename(columns={Table_A_5_4_1b.columns[0]: 'E_keV', 
+                               Table_A_5_4_1b.columns[1]: 'dskin_slab_0_pGy.cm2',
+                               Table_A_5_4_1b.columns[2]: 'dskin_slab_15',
+                               Table_A_5_4_1b.columns[3]: 'dskin_slab_30',
+                               Table_A_5_4_1b.columns[4]: 'dskin_slab_45',
+                               Table_A_5_4_1b.columns[5]: 'dskin_slab_60',
+                               Table_A_5_4_1b.columns[6]: 'dskin_slab_75',
+                             }, inplace=True)
+Table_A_5_4_1b[['E_keV']] = Table_A_5_4_1b[['E_keV']].astype('float64')
+Table_A_5_4_1b.to_csv('./data/Table_A_5_4_1b_photon_kerm_dskin_slab_kermaapprox.csv', index=False) 
+
+
+# dskin_pillar - fluence - kermaapprox
+Table_A_5_4_2a = pd.read_excel(excel_photon, sheet_name='A.5.4.2a-b', skiprows = 2, usecols = 'C:Q')
+Table_A_5_4_2a.dropna(inplace=True)
+Table_A_5_4_2a.rename(columns={Table_A_5_4_2a.columns[0]: 'E_keV', 
+                               Table_A_5_4_2a.columns[1]: 'dskin_pillar_0_pSv.cm2',
+                               Table_A_5_4_2a.columns[2]: 'dskin_pillar_15',
+                               Table_A_5_4_2a.columns[3]: 'dskin_pillar_30',
+                               Table_A_5_4_2a.columns[4]: 'dskin_pillar_45',
+                               Table_A_5_4_2a.columns[5]: 'dskin_pillar_60',
+                               Table_A_5_4_2a.columns[6]: 'dskin_pillar_75',
+                               Table_A_5_4_2a.columns[7]: 'dskin_pillar_90',
+                               Table_A_5_4_2a.columns[8]: 'dskin_pillar_105',
+                               Table_A_5_4_2a.columns[9]: 'dskin_pillar_120',
+                               Table_A_5_4_2a.columns[10]: 'dskin_pillar_135',
+                               Table_A_5_4_2a.columns[11]: 'dskin_pillar_150',
+                               Table_A_5_4_2a.columns[12]: 'dskin_pillar_165',
+                               Table_A_5_4_2a.columns[13]: 'dskin_pillar_180',
+                               Table_A_5_4_2a.columns[14]: 'dskin_pillar_ROT',
+                             }, inplace=True)
+Table_A_5_4_2a[['E_keV']] = Table_A_5_4_2a[['E_keV']].astype('float64')
+Table_A_5_4_2a.to_csv('./data/Table_A_5_4_2a_photon_fluence_dskin_pillar_kermaapprox.csv', index=False) 
+
+
+# dskin_pillar - kerma - kermaapprox
+Table_A_5_4_2b = pd.read_excel(excel_photon, sheet_name='A.5.4.2a-b', skiprows = 2, usecols = 'U:AI')
+Table_A_5_4_2b.dropna(inplace=True)
+Table_A_5_4_2b.rename(columns={Table_A_5_4_2b.columns[0]: 'E_keV', 
+                               Table_A_5_4_2b.columns[1]: 'dskin_pillar_0_pSv.cm2',
+                               Table_A_5_4_2b.columns[2]: 'dskin_pillar_15',
+                               Table_A_5_4_2b.columns[3]: 'dskin_pillar_30',
+                               Table_A_5_4_2b.columns[4]: 'dskin_pillar_45',
+                               Table_A_5_4_2b.columns[5]: 'dskin_pillar_60',
+                               Table_A_5_4_2b.columns[6]: 'dskin_pillar_75',
+                               Table_A_5_4_2b.columns[7]: 'dskin_pillar_90',
+                               Table_A_5_4_2b.columns[8]: 'dskin_pillar_105',
+                               Table_A_5_4_2b.columns[9]: 'dskin_pillar_120',
+                               Table_A_5_4_2b.columns[10]: 'dskin_pillar_135',
+                               Table_A_5_4_2b.columns[11]: 'dskin_pillar_150',
+                               Table_A_5_4_2b.columns[12]: 'dskin_pillar_165',
+                               Table_A_5_4_2b.columns[13]: 'dskin_pillar_180',
+                               Table_A_5_4_2b.columns[14]: 'dskin_pillar_ROT',
+                             }, inplace=True)
+Table_A_5_4_2b[['E_keV']] = Table_A_5_4_2b[['E_keV']].astype('float64')
+Table_A_5_4_2b.to_csv('./data/Table_A_5_4_2b_photon_fluence_dskin_pillar_kermaapprox.csv', index=False) 
+
+
+# dskin_rod - fluence - kermaapprox
+Table_A_5_4_3a = pd.read_excel(excel_photon, sheet_name='A.5.4.3a-b', skiprows = 2, usecols = 'C:Q')
+Table_A_5_4_3a.dropna(inplace=True)
+Table_A_5_4_3a.rename(columns={Table_A_5_4_3a.columns[0]: 'E_keV', 
+                               Table_A_5_4_3a.columns[1]: 'dskin_pillar_0_pSv.cm2',
+                               Table_A_5_4_3a.columns[2]: 'dskin_pillar_15',
+                               Table_A_5_4_3a.columns[3]: 'dskin_pillar_30',
+                               Table_A_5_4_3a.columns[4]: 'dskin_pillar_45',
+                               Table_A_5_4_3a.columns[5]: 'dskin_pillar_60',
+                               Table_A_5_4_3a.columns[6]: 'dskin_pillar_75',
+                               Table_A_5_4_3a.columns[7]: 'dskin_pillar_90',
+                               Table_A_5_4_3a.columns[8]: 'dskin_pillar_105',
+                               Table_A_5_4_3a.columns[9]: 'dskin_pillar_120',
+                               Table_A_5_4_3a.columns[10]: 'dskin_pillar_135',
+                               Table_A_5_4_3a.columns[11]: 'dskin_pillar_150',
+                               Table_A_5_4_3a.columns[12]: 'dskin_pillar_165',
+                               Table_A_5_4_3a.columns[13]: 'dskin_pillar_180',
+                               Table_A_5_4_3a.columns[14]: 'dskin_pillar_ROT',
+                             }, inplace=True)
+Table_A_5_4_3a[['E_keV']] = Table_A_5_4_3a[['E_keV']].astype('float64')
+Table_A_5_4_3a.to_csv('./data/Table_A_5_4_3a_photon_fluence_dskin_rod_kermaapprox.csv', index=False) 
+
+# dskin_rod - kerma - kermaapprox
+Table_A_5_4_3b = pd.read_excel(excel_photon, sheet_name='A.5.4.3a-b', skiprows = 2, usecols = 'U:AI')
+Table_A_5_4_3b.dropna(inplace=True)
+Table_A_5_4_3b.rename(columns={Table_A_5_4_3b.columns[0]: 'E_keV', 
+                               Table_A_5_4_3b.columns[1]: 'dskin_pillar_0_pSv.cm2',
+                               Table_A_5_4_3b.columns[2]: 'dskin_pillar_15',
+                               Table_A_5_4_3b.columns[3]: 'dskin_pillar_30',
+                               Table_A_5_4_3b.columns[4]: 'dskin_pillar_45',
+                               Table_A_5_4_3b.columns[5]: 'dskin_pillar_60',
+                               Table_A_5_4_3b.columns[6]: 'dskin_pillar_75',
+                               Table_A_5_4_3b.columns[7]: 'dskin_pillar_90',
+                               Table_A_5_4_3b.columns[8]: 'dskin_pillar_105',
+                               Table_A_5_4_3b.columns[9]: 'dskin_pillar_120',
+                               Table_A_5_4_3b.columns[10]: 'dskin_pillar_135',
+                               Table_A_5_4_3b.columns[11]: 'dskin_pillar_150',
+                               Table_A_5_4_3b.columns[12]: 'dskin_pillar_165',
+                               Table_A_5_4_3b.columns[13]: 'dskin_pillar_180',
+                               Table_A_5_4_3b.columns[14]: 'dskin_pillar_ROT',
+                             }, inplace=True)
+Table_A_5_4_3b[['E_keV']] = Table_A_5_4_3b[['E_keV']].astype('float64')
+Table_A_5_4_3b.to_csv('./data/Table_A_5_4_3b_photon_kerma_dskin_rod_kermaapprox.csv', index=False) 
+
+# kerma coefficient
+Table_A_6 = pd.read_excel(excel_photon, sheet_name='A.6', skiprows = 2, usecols = 'C:D')
+Table_A_6.dropna(inplace=True)
+Table_A_6.rename(columns={Table_A_6.columns[0]: 'E_keV', 
+                          Table_A_6.columns[1]: 'k_pSv.cm2',
+                           }, inplace=True)
+Table_A_6[['E_keV']] = Table_A_6[['E_keV']].astype('float64')
+Table_A_6.to_csv('./data/Table_A_6_photon_kerma_coef.csv', index=False) 
+
+
+# h* - kerma - kermaapprox - extend
+minE = min(Table_A_5_1b['E_keV'])
+ex = Table_A_1_1b[Table_A_1_1b['E_keV'] < minE]
+Table_A_5_1b_ex = pd.concat([ex, Table_A_5_1b])
+Table_A_5_1b_ex.to_csv('./data/Table_A_5_1b_photon_h_kermaapprox_extend.csv', index=False) 
+
+# hp - kerma - kermaapprox - extend
+minE = min(Table_A_5_2b['E_keV'])
+ex = Table_A_2_1b[Table_A_2_1b['E_keV'] < minE]
+Table_A_5_2b_ex = pd.concat([ex, Table_A_5_2b])
+Table_A_5_2b_ex.to_csv('./data/Table_A_5_2b_photon_hp_kermaapprox_extend.csv', index=False) 
+
+# dlens - kerma - kermaapprox - extend
+# minE = min(Table_A_5_3b['E_keV'])
+# ex = Table_A_3_1b[Table_A_3_1b['E_keV'] < minE]
+# Table_A_5_2b_ex = pd.concat([ex, Table_A_5_2b])
+# Table_A_5_2b_ex.to_csv('./data/Table_A_5_2b_photon_hp_kermaapprox_extend.csv', index=False) 
