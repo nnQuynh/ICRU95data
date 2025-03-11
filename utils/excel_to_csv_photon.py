@@ -210,7 +210,7 @@ Table_A_4_1_3b.rename(columns={Table_A_4_1_3b.columns[0]: 'E_keV',
                                Table_A_4_1_3b.columns[14]: 'dskin_rod_ROT',
                               }, inplace=True)
 Table_A_4_1_3b[['E_keV']] = Table_A_4_1_3b[['E_keV']].astype('float64')
-Table_A_4_1_3b.to_csv('./data/photon/Table_A_4_1_3b_photon_fluence_dskin_rod.csv', index=False) 
+Table_A_4_1_3b.to_csv('./data/photon/Table_A_4_1_3b_photon_kerma_dskin_rod.csv', index=False) 
 
 # h* - fluence - kermaapprox
 Table_A_5_1a = pd.read_excel(excel_photon, sheet_name='A.5.1a-b', skiprows = 2, usecols = 'C,D')
@@ -403,20 +403,20 @@ Table_A_5_4_3a.to_csv('./data/photon/Table_A_5_4_3a_photon_fluence_dskin_rod_ker
 Table_A_5_4_3b = pd.read_excel(excel_photon, sheet_name='A.5.4.3a-b', skiprows = 2, usecols = 'U:AI')
 Table_A_5_4_3b.dropna(inplace=True)
 Table_A_5_4_3b.rename(columns={Table_A_5_4_3b.columns[0]: 'E_keV', 
-                               Table_A_5_4_3b.columns[1]: 'dskin_pillar_0_Sv/Gy',
-                               Table_A_5_4_3b.columns[2]: 'dskin_pillar_15',
-                               Table_A_5_4_3b.columns[3]: 'dskin_pillar_30',
-                               Table_A_5_4_3b.columns[4]: 'dskin_pillar_45',
-                               Table_A_5_4_3b.columns[5]: 'dskin_pillar_60',
-                               Table_A_5_4_3b.columns[6]: 'dskin_pillar_75',
-                               Table_A_5_4_3b.columns[7]: 'dskin_pillar_90',
-                               Table_A_5_4_3b.columns[8]: 'dskin_pillar_105',
-                               Table_A_5_4_3b.columns[9]: 'dskin_pillar_120',
-                               Table_A_5_4_3b.columns[10]: 'dskin_pillar_135',
-                               Table_A_5_4_3b.columns[11]: 'dskin_pillar_150',
-                               Table_A_5_4_3b.columns[12]: 'dskin_pillar_165',
-                               Table_A_5_4_3b.columns[13]: 'dskin_pillar_180',
-                               Table_A_5_4_3b.columns[14]: 'dskin_pillar_ROT',
+                               Table_A_5_4_3b.columns[1]: 'dskin_rod_0_Sv/Gy',
+                               Table_A_5_4_3b.columns[2]: 'dskin_rod_15',
+                               Table_A_5_4_3b.columns[3]: 'dskin_rod_30',
+                               Table_A_5_4_3b.columns[4]: 'dskin_rod_45',
+                               Table_A_5_4_3b.columns[5]: 'dskin_rod_60',
+                               Table_A_5_4_3b.columns[6]: 'dskin_rod_75',
+                               Table_A_5_4_3b.columns[7]: 'dskin_rod_90',
+                               Table_A_5_4_3b.columns[8]: 'dskin_rod_105',
+                               Table_A_5_4_3b.columns[9]: 'dskin_rod_120',
+                               Table_A_5_4_3b.columns[10]: 'dskin_rod_135',
+                               Table_A_5_4_3b.columns[11]: 'dskin_rod_150',
+                               Table_A_5_4_3b.columns[12]: 'dskin_rod_165',
+                               Table_A_5_4_3b.columns[13]: 'dskin_rod_180',
+                               Table_A_5_4_3b.columns[14]: 'dskin_rod_ROT',
                              }, inplace=True)
 Table_A_5_4_3b[['E_keV']] = Table_A_5_4_3b[['E_keV']].astype('float64')
 Table_A_5_4_3b.to_csv('./data/photon/Table_A_5_4_3b_photon_kerma_dskin_rod_kermaapprox.csv', index=False) 
