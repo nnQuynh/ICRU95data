@@ -222,7 +222,7 @@ Table_A_5_1a[['E_keV']] = Table_A_5_1a[['E_keV']].astype('float64')
 Table_A_5_1a.to_csv('./data/photon/Table_A_5_1a_photon_fluence_h_kermaapprox.csv', index=False)
 
 # h* - kerma - kermaapprox
-Table_A_5_1b = pd.read_excel(excel_photon, sheet_name='A.5.1a-b', skiprows = 2, usecols = 'C,D')
+Table_A_5_1b = pd.read_excel(excel_photon, sheet_name='A.5.1a-b', skiprows = 2, usecols = 'I,J')
 Table_A_5_1b.dropna(inplace=True)
 Table_A_5_1b.rename(columns={Table_A_5_1b.columns[0]: 'E_keV', 
                              Table_A_5_1b.columns[1]: 'h_Sv/Gy'}, 
@@ -251,7 +251,7 @@ Table_A_5_2a[['E_keV']] = Table_A_5_2a[['E_keV']].astype('float64')
 Table_A_5_2a.to_csv('./data/photon/Table_A_5_2a_photon_fluence_hp_kermaapprox.csv', index=False) 
 
 # hp - kerma - kermaapprox
-Table_A_5_2b = pd.read_excel(excel_photon, sheet_name='A.5.2a-b', skiprows = 2, usecols = 'C:O')
+Table_A_5_2b = pd.read_excel(excel_photon, sheet_name='A.5.2a-b', skiprows = 2, usecols = 'S:AE')
 Table_A_5_2b.dropna(inplace=True)
 Table_A_5_2b.rename(columns={Table_A_5_2b.columns[0]: 'E_keV', 
                              Table_A_5_2b.columns[1]: 'hp_0_Sv/Gy',
