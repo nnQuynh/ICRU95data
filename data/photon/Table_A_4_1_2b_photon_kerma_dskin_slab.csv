@@ -1,4 +1,4 @@
-E_keV,dskin_slab_0_Sv/Gy,dskin_slab_15,dskin_slab_30,dskin_slab_45,dskin_slab_60,dskin_slab_75,dskin_slab_90,dskin_slab_105,dskin_slab_120,dskin_slab_135,dskin_slab_150,dskin_slab_165,dskin_slab_180,dskin_slab_ROT
+E_keV,dskin_pillar_0_Sv/Gy,dskin_pillar_15,dskin_pillar_30,dskin_pillar_45,dskin_pillar_60,dskin_pillar_75,dskin_pillar_90,dskin_pillar_105,dskin_pillar_120,dskin_pillar_135,dskin_pillar_150,dskin_pillar_165,dskin_pillar_180,dskin_pillar_ROT
 2.0,0.018,0.0158,0.0102,0.00411,0.00067,1.25e-05,2e-07,0.0,0.0,0.0,0.0,0.0,0.0,0.00332
 3.0,0.276,0.264,0.224,0.159,0.0759,0.0116,3.36e-05,0.0,0.0,0.0,0.0,0.0,0.0,0.0727
 4.0,0.55,0.539,0.501,0.428,0.301,0.109,0.002,0.0,0.0,0.0,0.0,0.0,0.0,0.18

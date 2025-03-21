@@ -460,20 +460,6 @@ df_hp = pd.DataFrame({'E_keV' : [3.0],
 Table_A_5_2b_ex = pd.concat([df_hp, Table_A_5_2b_ex], ignore_index=True)
 Table_A_5_2b_ex.to_csv('./data/photon/Table_A_5_2b_photon_kerma_hp_kermaapprox_extend.csv', index=False) 
 
-# dlens - kerma - kermaapprox - extend
-df_dlens = pd.DataFrame({'E_keV' : [3.0], 
-                   'dlens_0_Sv/Gy' : [0.0],
-                   'dlens_15' : [0.0],
-                   'dlens_30' : [0.0],
-                   'dlens_45' : [0.0],
-                   'dlens_60' : [0.0],
-                   'dlens_75' : [0.0],
-                   'dlens_90' : [0.0],
-                   'dlens_ROT' : [0.0],
-                   })
-Table_A_5_3b_ex = pd.concat([df_dlens, Table_A_5_3b], ignore_index=True)
-Table_A_5_3b_ex.to_csv('./data/photon/Table_A_5_3b_photon_kerma_dlens_kermaapprox_extend.csv', index=False) 
-
 # dskin_slab - kerma - kermaapprox - extend
 minE = min(Table_A_5_4_1b['E_keV'])
 ex_skin_slab = Table_A_5_4_2b[Table_A_5_4_2b['E_keV'] < minE]
@@ -493,31 +479,31 @@ Table_A_5_4_1b_ex.to_csv('./data/photon/Table_A_5_4_1b_photon_kerma_dskin_slab_k
 # dskin_slab - fluence - extend
 minE = min(Table_A_4_1_1a['E_keV'])
 ex_skin_slab = Table_A_4_1_2a[Table_A_4_1_2a['E_keV'] < minE]
-ex_skin_slab.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
-                 'dskin_pillar_150','dskin_pillar_165','dskin_pillar_180','dskin_pillar_ROT'],
-                 inplace=True)
-ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
+ex_skin_slab = ex_skin_slab[['E_keV',"dskin_pillar_0_pGy.cm2",'dskin_pillar_15',"dskin_pillar_30","dskin_pillar_45",
+                             "dskin_pillar_60","dskin_pillar_75"]]
+ex_skin_slab = ex_skin_slab.rename(columns={"dskin_pillar_0_pGy.cm2": "dskin_slab_0_pGy.cm2", 
                    "dskin_pillar_15": "dskin_slab_15",
                    "dskin_pillar_30": "dskin_slab_30",
                    "dskin_pillar_45": "dskin_slab_45",
                    "dskin_pillar_60": "dskin_slab_60",
                    "dskin_pillar_75": "dskin_slab_75",
-                   }, inplace=True)
+                   })
 Table_A_4_1_1a_ex = pd.concat([ex_skin_slab, Table_A_4_1_1a], ignore_index=True)
 Table_A_4_1_1a_ex.to_csv('./data/photon/Table_A_4_1_1a_photon_fluence_dskin_slab_extend.csv', index=False) 
 
 # dskin_slab - kerma - extend
 minE = min(Table_A_4_1_1b['E_keV'])
 ex_skin_slab = Table_A_4_1_2b[Table_A_4_1_2b['E_keV'] < minE]
-ex_skin_slab.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
-                 'dskin_pillar_150','dskin_pillar_165','dskin_pillar_180','dskin_pillar_ROT'],
-                 inplace=True)
-ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
+ex_skin_slab = ex_skin_slab[['E_keV',"dskin_pillar_0_Sv/Gy",'dskin_pillar_15',"dskin_pillar_30","dskin_pillar_45",
+                             "dskin_pillar_60","dskin_pillar_75"]]
+ex_skin_slab = ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
                    "dskin_pillar_15": "dskin_slab_15",
                    "dskin_pillar_30": "dskin_slab_30",
                    "dskin_pillar_45": "dskin_slab_45",
                    "dskin_pillar_60": "dskin_slab_60",
                    "dskin_pillar_75": "dskin_slab_75",
-                   }, inplace=True)
+                   })
 Table_A_4_1_1b_ex = pd.concat([ex_skin_slab, Table_A_4_1_1b], ignore_index=True)
 Table_A_4_1_1b_ex.to_csv('./data/photon/Table_A_4_1_1b_photon_kerma_dskin_slab_extend.csv', index=False) 
+
+
