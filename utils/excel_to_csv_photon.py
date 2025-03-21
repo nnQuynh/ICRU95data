@@ -166,7 +166,7 @@ Table_A_4_1_2b.rename(columns={Table_A_4_1_2b.columns[0]: 'E_keV',
                                Table_A_4_1_2b.columns[14]: 'dskin_pillar_ROT',
                               }, inplace=True)
 Table_A_4_1_2b[['E_keV']] = Table_A_4_1_2b[['E_keV']].astype('float64')
-Table_A_4_1_2b.to_csv('./data/photon/Table_A_4_1_2b_photon_kerma_dskin_slab.csv', index=False) 
+Table_A_4_1_2b.to_csv('./data/photon/Table_A_4_1_2b_photon_kerma_dskin_pillar.csv', index=False) 
 
 # dskin_rod - fluence
 Table_A_4_1_3a = pd.read_excel(excel_photon, sheet_name='A.4.1.3a-b', skiprows = 2, usecols = 'C:Q')
