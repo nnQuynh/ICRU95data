@@ -1,7 +1,7 @@
 # Table A.5.4.3b: Conversion coefficients from photon kerma to personal absorbed dose in local skin on the rod phantom using the kerma-approximation
 # Energy: keV ; dskin_rod: Gy/Gy
 # 
-E_keV,dskin_rod_0_Sv/Gy,dskin_rod_15,dskin_rod_30,dskin_rod_45,dskin_rod_60,dskin_rod_75,dskin_rod_90,dskin_rod_105,dskin_rod_120,dskin_rod_135,dskin_rod_150,dskin_rod_165,dskin_rod_180,dskin_rod_ROT
+E,dskin_rod_0,dskin_rod_15,dskin_rod_30,dskin_rod_45,dskin_rod_60,dskin_rod_75,dskin_rod_90,dskin_rod_105,dskin_rod_120,dskin_rod_135,dskin_rod_150,dskin_rod_165,dskin_rod_180,dskin_rod_ROT
 2.0,0.0155,0.0139,0.00996,0.00555,0.00222,0.000523,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.00333
 3.0,0.262,0.248,0.21,0.151,0.0884,0.0386,0.00981,0.000624,0.0,0.0,0.0,0.0,0.0,0.0732
 4.0,0.538,0.523,0.481,0.399,0.277,0.154,0.0596,0.00953,0.0,0.0,0.0,0.0,0.0,0.181

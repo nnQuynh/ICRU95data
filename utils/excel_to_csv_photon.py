@@ -8,7 +8,7 @@ Table_A_1_1a.dropna(inplace=True)
 Table_A_1_1a.rename(columns={Table_A_1_1a.columns[0]: 'E', 
                              Table_A_1_1a.columns[1]: 'h'}, 
                              inplace=True)
-Table_A_1_1a[['E_keV']] = Table_A_1_1a[['E_keV']].astype('float64')
+Table_A_1_1a[['E']] = Table_A_1_1a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_1_1a_photon_fluence_h.csv'
 with open(outputFile, 'w') as f:
@@ -24,7 +24,7 @@ Table_A_1_1b.dropna(inplace=True)
 Table_A_1_1b.rename(columns={Table_A_1_1b.columns[0]: 'E', 
                              Table_A_1_1b.columns[1]: 'h'}, 
                              inplace=True)
-Table_A_1_1b[['E_keV']] = Table_A_1_1b[['E_keV']].astype('float64')
+Table_A_1_1b[['E']] = Table_A_1_1b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_1_1b_photon_kerma_h.csv'
 with open(outputFile, 'w') as f:
@@ -50,7 +50,7 @@ Table_A_2_1a.rename(columns={Table_A_2_1a.columns[0]: 'E',
                              Table_A_2_1a.columns[11]: 'hp_SS-ISO',
                              Table_A_2_1a.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
-Table_A_2_1a[['E_keV']] = Table_A_2_1a[['E_keV']].astype('float64')
+Table_A_2_1a[['E']] = Table_A_2_1a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_2_1a_photon_fluence_hp.csv'
 with open(outputFile, 'w') as f:
@@ -77,7 +77,7 @@ Table_A_2_1b.rename(columns={Table_A_2_1b.columns[0]: 'E',
                              Table_A_2_1b.columns[11]: 'hp_SS-ISO',
                              Table_A_2_1b.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
-Table_A_2_1b[['E_keV']] = Table_A_2_1b[['E_keV']].astype('float64')
+Table_A_2_1b[['E']] = Table_A_2_1b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_2_1b_photon_kerma_hp.csv'
 with open(outputFile, 'w') as f:
@@ -99,7 +99,7 @@ Table_A_3_1a.rename(columns={Table_A_3_1a.columns[0]: 'E',
                              Table_A_3_1a.columns[7]: 'dlens_90',
                              Table_A_3_1a.columns[8]: 'dlens_ROT',
                              }, inplace=True)
-Table_A_3_1a[['E_keV']] = Table_A_3_1a[['E_keV']].astype('float64')
+Table_A_3_1a[['E']] = Table_A_3_1a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_3_1a_photon_fluence_dlens.csv'
 with open(outputFile, 'w') as f:
@@ -122,7 +122,7 @@ Table_A_3_1b.rename(columns={Table_A_3_1b.columns[0]: 'E',
                              Table_A_3_1b.columns[7]: 'dlens_90',
                              Table_A_3_1b.columns[8]: 'dlens_ROT',
                              }, inplace=True)
-Table_A_3_1b[['E_keV']] = Table_A_3_1b[['E_keV']].astype('float64')
+Table_A_3_1b[['E']] = Table_A_3_1b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_3_1b_photon_kerma_dlens.csv'
 with open(outputFile, 'w') as f:
@@ -151,7 +151,7 @@ Table_A_4_1_2a.rename(columns={Table_A_4_1_2a.columns[0]: 'E',
                                Table_A_4_1_2a.columns[13]: 'dskin_pillar_180',
                                Table_A_4_1_2a.columns[14]: 'dskin_pillar_ROT',
                               }, inplace=True)
-Table_A_4_1_2a[['E_keV']] = Table_A_4_1_2a[['E_keV']].astype('float64')
+Table_A_4_1_2a[['E']] = Table_A_4_1_2a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_4_1_2a_photon_fluence_dskin_pillar.csv'
 with open(outputFile, 'w') as f:
@@ -180,7 +180,7 @@ Table_A_4_1_2b.rename(columns={Table_A_4_1_2b.columns[0]: 'E',
                                Table_A_4_1_2b.columns[13]: 'dskin_pillar_180',
                                Table_A_4_1_2b.columns[14]: 'dskin_pillar_ROT',
                               }, inplace=True)
-Table_A_4_1_2b[['E_keV']] = Table_A_4_1_2b[['E_keV']].astype('float64')
+Table_A_4_1_2b[['E']] = Table_A_4_1_2b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_4_1_2b_photon_kerma_dskin_pillar.csv'
 with open(outputFile, 'w') as f:
@@ -202,7 +202,7 @@ Table_A_4_1_1a.rename(columns={Table_A_4_1_1a.columns[0]: 'E',
                                Table_A_4_1_1a.columns[5]: 'dskin_slab_60',
                                Table_A_4_1_1a.columns[6]: 'dskin_slab_75',
                              }, inplace=True)
-Table_A_4_1_1a[['E_keV']] = Table_A_4_1_1a[['E_keV']].astype('float64')
+Table_A_4_1_1a[['E']] = Table_A_4_1_1a[['E']].astype('float64')
 
 minE = min(Table_A_4_1_1a['E'])
 ex = Table_A_4_1_2a[Table_A_4_1_2a['E'] < minE]
@@ -234,7 +234,7 @@ Table_A_4_1_1b.rename(columns={Table_A_4_1_1b.columns[0]: 'E',
                                Table_A_4_1_1b.columns[5]: 'dskin_slab_60',
                                Table_A_4_1_1b.columns[6]: 'dskin_slab_75',
                              }, inplace=True)
-Table_A_4_1_1b[['E_keV']] = Table_A_4_1_1b[['E_keV']].astype('float64')
+Table_A_4_1_1b[['E']] = Table_A_4_1_1b[['E']].astype('float64')
 
 
 minE = min(Table_A_4_1_1b['E'])
@@ -276,7 +276,7 @@ Table_A_4_1_3a.rename(columns={Table_A_4_1_3a.columns[0]: 'E',
                                Table_A_4_1_3a.columns[13]: 'dskin_rod_180',
                                Table_A_4_1_3a.columns[14]: 'dskin_rod_ROT',
                               }, inplace=True)
-Table_A_4_1_3a[['E_keV']] = Table_A_4_1_3a[['E_keV']].astype('float64')
+Table_A_4_1_3a[['E']] = Table_A_4_1_3a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_4_1_3a_photon_fluence_dskin_rod.csv'
 with open(outputFile, 'w') as f:
@@ -305,7 +305,7 @@ Table_A_4_1_3b.rename(columns={Table_A_4_1_3b.columns[0]: 'E',
                                Table_A_4_1_3b.columns[13]: 'dskin_rod_180',
                                Table_A_4_1_3b.columns[14]: 'dskin_rod_ROT',
                               }, inplace=True)
-Table_A_4_1_3b[['E_keV']] = Table_A_4_1_3b[['E_keV']].astype('float64')
+Table_A_4_1_3b[['E']] = Table_A_4_1_3b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_4_1_3b_photon_kerma_dskin_rod.csv'
 with open(outputFile, 'w') as f:
@@ -321,7 +321,7 @@ Table_A_5_1a.dropna(inplace=True)
 Table_A_5_1a.rename(columns={Table_A_5_1a.columns[0]: 'E', 
                              Table_A_5_1a.columns[1]: 'h'}, 
                              inplace=True)
-Table_A_5_1a[['E_keV']] = Table_A_5_1a[['E_keV']].astype('float64')
+Table_A_5_1a[['E']] = Table_A_5_1a[['E']].astype('float64')
 
 minE = min(Table_A_5_1a['E'])
 ex = Table_A_1_1a[Table_A_1_1a['E'] < minE]
@@ -341,7 +341,7 @@ Table_A_5_1b.dropna(inplace=True)
 Table_A_5_1b.rename(columns={Table_A_5_1b.columns[0]: 'E', 
                              Table_A_5_1b.columns[1]: 'h'}, 
                              inplace=True)
-Table_A_5_1b[['E_keV']] = Table_A_5_1b[['E_keV']].astype('float64')
+Table_A_5_1b[['E']] = Table_A_5_1b[['E']].astype('float64')
 
 minE = min(Table_A_5_1b['E'])
 ex = Table_A_1_1b[Table_A_1_1b['E'] < minE]
@@ -371,7 +371,7 @@ Table_A_5_2a.rename(columns={Table_A_5_2a.columns[0]: 'E',
                              Table_A_5_2a.columns[11]: 'hp_SS-ISO',
                              Table_A_5_2a.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
-Table_A_5_2a[['E_keV']] = Table_A_5_2a[['E_keV']].astype('float64')
+Table_A_5_2a[['E']] = Table_A_5_2a[['E']].astype('float64')
 
 minE = min(Table_A_5_2a['E'])
 ex = Table_A_2_1a[Table_A_2_1a['E'] < minE]
@@ -402,7 +402,7 @@ Table_A_5_2b.rename(columns={Table_A_5_2b.columns[0]: 'E',
                              Table_A_5_2b.columns[11]: 'hp_SS-ISO',
                              Table_A_5_2b.columns[12]: 'hp_IS-ISO',
                              }, inplace=True)
-Table_A_5_2b[['E_keV']] = Table_A_5_2b[['E_keV']].astype('float64')
+Table_A_5_2b[['E']] = Table_A_5_2b[['E']].astype('float64')
 
 minE = min(Table_A_5_2b['E'])
 ex = Table_A_2_1b[Table_A_2_1b['E'] < minE]
@@ -429,7 +429,7 @@ Table_A_5_3a.rename(columns={Table_A_5_3a.columns[0]: 'E',
                              Table_A_5_3a.columns[7]: 'dlens_90',
                              Table_A_5_3a.columns[8]: 'dlens_ROT',
                              }, inplace=True)
-Table_A_5_3a[['E_keV']] = Table_A_5_3a[['E_keV']].astype('float64')
+Table_A_5_3a[['E']] = Table_A_5_3a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_5_3a_photon_fluence_dlens_kermaapprox.csv'
 with open(outputFile, 'w') as f:
@@ -442,8 +442,8 @@ Table_A_5_3a.to_csv(outputFile, mode='a', index=False)
 # dlens - kerma - kermaapprox
 Table_A_5_3b = pd.read_excel(excel_photon, sheet_name='A.5.3a-b', skiprows = 2, usecols = 'O:W')
 Table_A_5_3b.dropna(inplace=True)
-Table_A_5_3b.rename(columns={Table_A_5_3b.columns[0]: 'E_keV', 
-                             Table_A_5_3b.columns[1]: 'dlens_0_Sv/Gy',
+Table_A_5_3b.rename(columns={Table_A_5_3b.columns[0]: 'E', 
+                             Table_A_5_3b.columns[1]: 'dlens_0',
                              Table_A_5_3b.columns[2]: 'dlens_15',
                              Table_A_5_3b.columns[3]: 'dlens_30',
                              Table_A_5_3b.columns[4]: 'dlens_45',
@@ -452,7 +452,7 @@ Table_A_5_3b.rename(columns={Table_A_5_3b.columns[0]: 'E_keV',
                              Table_A_5_3b.columns[7]: 'dlens_90',
                              Table_A_5_3b.columns[8]: 'dlens_ROT',
                              }, inplace=True)
-Table_A_5_3b[['E_keV']] = Table_A_5_3b[['E_keV']].astype('float64')
+Table_A_5_3b[['E']] = Table_A_5_3b[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_5_3b_photon_kerma_dlens_kermaapprox.csv'
 with open(outputFile, 'w') as f:
@@ -592,8 +592,8 @@ Table_A_5_4_1b_ex.to_csv(outputFile, mode='a', index=False)
 # dskin_rod - fluence - kermaapprox
 Table_A_5_4_3a = pd.read_excel(excel_photon, sheet_name='A.5.4.3a-b', skiprows = 2, usecols = 'C:Q')
 Table_A_5_4_3a.dropna(inplace=True)
-Table_A_5_4_3a.rename(columns={Table_A_5_4_3a.columns[0]: 'E_keV', 
-                               Table_A_5_4_3a.columns[1]: 'dskin_pillar_0_pSv.cm2',
+Table_A_5_4_3a.rename(columns={Table_A_5_4_3a.columns[0]: 'E', 
+                               Table_A_5_4_3a.columns[1]: 'dskin_pillar_0',
                                Table_A_5_4_3a.columns[2]: 'dskin_pillar_15',
                                Table_A_5_4_3a.columns[3]: 'dskin_pillar_30',
                                Table_A_5_4_3a.columns[4]: 'dskin_pillar_45',
@@ -608,7 +608,7 @@ Table_A_5_4_3a.rename(columns={Table_A_5_4_3a.columns[0]: 'E_keV',
                                Table_A_5_4_3a.columns[13]: 'dskin_pillar_180',
                                Table_A_5_4_3a.columns[14]: 'dskin_pillar_ROT',
                              }, inplace=True)
-Table_A_5_4_3a[['E_keV']] = Table_A_5_4_3a[['E_keV']].astype('float64')
+Table_A_5_4_3a[['E']] = Table_A_5_4_3a[['E']].astype('float64')
 
 outputFile = './data/photon/Table_A_5_4_3a_photon_fluence_dskin_rod_kermaapprox.csv'
 with open(outputFile, 'w') as f:
@@ -621,8 +621,8 @@ Table_A_5_4_3a.to_csv(outputFile, mode='a', index=False)
 # dskin_rod - kerma - kermaapprox
 Table_A_5_4_3b = pd.read_excel(excel_photon, sheet_name='A.5.4.3a-b', skiprows = 2, usecols = 'U:AI')
 Table_A_5_4_3b.dropna(inplace=True)
-Table_A_5_4_3b.rename(columns={Table_A_5_4_3b.columns[0]: 'E_keV', 
-                               Table_A_5_4_3b.columns[1]: 'dskin_rod_0_Sv/Gy',
+Table_A_5_4_3b.rename(columns={Table_A_5_4_3b.columns[0]: 'E', 
+                               Table_A_5_4_3b.columns[1]: 'dskin_rod_0',
                                Table_A_5_4_3b.columns[2]: 'dskin_rod_15',
                                Table_A_5_4_3b.columns[3]: 'dskin_rod_30',
                                Table_A_5_4_3b.columns[4]: 'dskin_rod_45',
@@ -637,7 +637,7 @@ Table_A_5_4_3b.rename(columns={Table_A_5_4_3b.columns[0]: 'E_keV',
                                Table_A_5_4_3b.columns[13]: 'dskin_rod_180',
                                Table_A_5_4_3b.columns[14]: 'dskin_rod_ROT',
                              }, inplace=True)
-Table_A_5_4_3b[['E_keV']] = Table_A_5_4_3b[['E_keV']].astype('float64')
+Table_A_5_4_3b[['E']] = Table_A_5_4_3b[['E']].astype('float64')
 
 
 outputFile = './data/photon/Table_A_5_4_3b_photon_kerma_dskin_rod_kermaapprox.csv'

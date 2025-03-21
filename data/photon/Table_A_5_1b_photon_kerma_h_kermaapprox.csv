@@ -1,6 +1,6 @@
 # Table A.5.1.b: Conversion coefficients from photon kerma to ambient dose calculated using kerma-approximation
 # Energy: keV ; h*: Sv/Gy
-# For energy below 10 keV, data taken from Table A.1.1b (full transport)
+# For energy below 10.0 keV, data taken from Table A.1.1b (full transport)
 E,h
 5.0,0.000437
 6.0,0.000781
