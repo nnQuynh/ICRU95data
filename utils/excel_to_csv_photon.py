@@ -127,43 +127,43 @@ Table_A_4_1_1b.to_csv('./data/photon/Table_A_4_1_1b_photon_kerma_dskin_slab.csv'
 Table_A_4_1_2a = pd.read_excel(excel_photon, sheet_name='A.4.1.2a-b', skiprows = 2, usecols = 'C:Q')
 Table_A_4_1_2a.dropna(inplace=True)
 Table_A_4_1_2a.rename(columns={Table_A_4_1_2a.columns[0]: 'E_keV', 
-                               Table_A_4_1_2a.columns[1]: 'dskin_slab_0_pGy.cm2',
-                               Table_A_4_1_2a.columns[2]: 'dskin_slab_15',
-                               Table_A_4_1_2a.columns[3]: 'dskin_slab_30',
-                               Table_A_4_1_2a.columns[4]: 'dskin_slab_45',
-                               Table_A_4_1_2a.columns[5]: 'dskin_slab_60',
-                               Table_A_4_1_2a.columns[6]: 'dskin_slab_75',
-                               Table_A_4_1_2a.columns[7]: 'dskin_slab_90',
-                               Table_A_4_1_2a.columns[8]: 'dskin_slab_105',
-                               Table_A_4_1_2a.columns[9]: 'dskin_slab_120',
-                               Table_A_4_1_2a.columns[10]: 'dskin_slab_135',
-                               Table_A_4_1_2a.columns[11]: 'dskin_slab_150',
-                               Table_A_4_1_2a.columns[12]: 'dskin_slab_165',
-                               Table_A_4_1_2a.columns[13]: 'dskin_slab_180',
-                               Table_A_4_1_2a.columns[14]: 'dskin_slab_ROT',
+                               Table_A_4_1_2a.columns[1]: 'dskin_pillar_0_pGy.cm2',
+                               Table_A_4_1_2a.columns[2]: 'dskin_pillar_15',
+                               Table_A_4_1_2a.columns[3]: 'dskin_pillar_30',
+                               Table_A_4_1_2a.columns[4]: 'dskin_pillar_45',
+                               Table_A_4_1_2a.columns[5]: 'dskin_pillar_60',
+                               Table_A_4_1_2a.columns[6]: 'dskin_pillar_75',
+                               Table_A_4_1_2a.columns[7]: 'dskin_pillar_90',
+                               Table_A_4_1_2a.columns[8]: 'dskin_pillar_105',
+                               Table_A_4_1_2a.columns[9]: 'dskin_pillar_120',
+                               Table_A_4_1_2a.columns[10]: 'dskin_pillar_135',
+                               Table_A_4_1_2a.columns[11]: 'dskin_pillar_150',
+                               Table_A_4_1_2a.columns[12]: 'dskin_pillar_165',
+                               Table_A_4_1_2a.columns[13]: 'dskin_pillar_180',
+                               Table_A_4_1_2a.columns[14]: 'dskin_pillar_ROT',
                               }, inplace=True)
 Table_A_4_1_2a[['E_keV']] = Table_A_4_1_2a[['E_keV']].astype('float64')
-Table_A_4_1_2a.to_csv('./data/photon/Table_A_4_1_2a_photon_fluence_dskin_slab.csv', index=False) 
+Table_A_4_1_2a.to_csv('./data/photon/Table_A_4_1_2a_photon_fluence_dskin_pillar.csv', index=False) 
  
 
 # dskin_pillar - kerma
 Table_A_4_1_2b = pd.read_excel(excel_photon, sheet_name='A.4.1.2a-b', skiprows = 2, usecols = 'U:AI')
 Table_A_4_1_2b.dropna(inplace=True)
 Table_A_4_1_2b.rename(columns={Table_A_4_1_2b.columns[0]: 'E_keV', 
-                               Table_A_4_1_2b.columns[1]: 'dskin_slab_0_Sv/Gy',
-                               Table_A_4_1_2b.columns[2]: 'dskin_slab_15',
-                               Table_A_4_1_2b.columns[3]: 'dskin_slab_30',
-                               Table_A_4_1_2b.columns[4]: 'dskin_slab_45',
-                               Table_A_4_1_2b.columns[5]: 'dskin_slab_60',
-                               Table_A_4_1_2b.columns[6]: 'dskin_slab_75',
-                               Table_A_4_1_2b.columns[7]: 'dskin_slab_90',
-                               Table_A_4_1_2b.columns[8]: 'dskin_slab_105',
-                               Table_A_4_1_2b.columns[9]: 'dskin_slab_120',
-                               Table_A_4_1_2b.columns[10]: 'dskin_slab_135',
-                               Table_A_4_1_2b.columns[11]: 'dskin_slab_150',
-                               Table_A_4_1_2b.columns[12]: 'dskin_slab_165',
-                               Table_A_4_1_2b.columns[13]: 'dskin_slab_180',
-                               Table_A_4_1_2b.columns[14]: 'dskin_slab_ROT',
+                               Table_A_4_1_2b.columns[1]: 'dskin_pillar_0_Sv/Gy',
+                               Table_A_4_1_2b.columns[2]: 'dskin_pillar_15',
+                               Table_A_4_1_2b.columns[3]: 'dskin_pillar_30',
+                               Table_A_4_1_2b.columns[4]: 'dskin_pillar_45',
+                               Table_A_4_1_2b.columns[5]: 'dskin_pillar_60',
+                               Table_A_4_1_2b.columns[6]: 'dskin_pillar_75',
+                               Table_A_4_1_2b.columns[7]: 'dskin_pillar_90',
+                               Table_A_4_1_2b.columns[8]: 'dskin_pillar_105',
+                               Table_A_4_1_2b.columns[9]: 'dskin_pillar_120',
+                               Table_A_4_1_2b.columns[10]: 'dskin_pillar_135',
+                               Table_A_4_1_2b.columns[11]: 'dskin_pillar_150',
+                               Table_A_4_1_2b.columns[12]: 'dskin_pillar_165',
+                               Table_A_4_1_2b.columns[13]: 'dskin_pillar_180',
+                               Table_A_4_1_2b.columns[14]: 'dskin_pillar_ROT',
                               }, inplace=True)
 Table_A_4_1_2b[['E_keV']] = Table_A_4_1_2b[['E_keV']].astype('float64')
 Table_A_4_1_2b.to_csv('./data/photon/Table_A_4_1_2b_photon_kerma_dskin_slab.csv', index=False) 
@@ -476,16 +476,48 @@ Table_A_5_3b_ex.to_csv('./data/photon/Table_A_5_3b_photon_kerma_dlens_kermaappro
 
 # dskin_slab - kerma - kermaapprox - extend
 minE = min(Table_A_5_4_1b['E_keV'])
-ex_dlens = Table_A_5_4_2b[Table_A_5_4_2b['E_keV'] < minE]
-ex_dlens.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
+ex_skin_slab = Table_A_5_4_2b[Table_A_5_4_2b['E_keV'] < minE]
+ex_skin_slab.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
                  'dskin_pillar_150','dskin_pillar_165','dskin_pillar_180','dskin_pillar_ROT'],
                  inplace=True)
-ex_dlens.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
+ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
                    "dskin_pillar_15": "dskin_slab_15",
                    "dskin_pillar_30": "dskin_slab_30",
                    "dskin_pillar_45": "dskin_slab_45",
                    "dskin_pillar_60": "dskin_slab_60",
                    "dskin_pillar_75": "dskin_slab_75",
                    }, inplace=True)
-Table_A_5_4_1b_ex = pd.concat([ex_dlens, Table_A_5_4_1b], ignore_index=True)
+Table_A_5_4_1b_ex = pd.concat([ex_skin_slab, Table_A_5_4_1b], ignore_index=True)
 Table_A_5_4_1b_ex.to_csv('./data/photon/Table_A_5_4_1b_photon_kerma_dskin_slab_kermaapprox_extend.csv', index=False) 
+
+# dskin_slab - fluence - extend
+minE = min(Table_A_4_1_1a['E_keV'])
+ex_skin_slab = Table_A_4_1_2a[Table_A_4_1_2a['E_keV'] < minE]
+ex_skin_slab.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
+                 'dskin_pillar_150','dskin_pillar_165','dskin_pillar_180','dskin_pillar_ROT'],
+                 inplace=True)
+ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
+                   "dskin_pillar_15": "dskin_slab_15",
+                   "dskin_pillar_30": "dskin_slab_30",
+                   "dskin_pillar_45": "dskin_slab_45",
+                   "dskin_pillar_60": "dskin_slab_60",
+                   "dskin_pillar_75": "dskin_slab_75",
+                   }, inplace=True)
+Table_A_4_1_1a_ex = pd.concat([ex_skin_slab, Table_A_4_1_1a], ignore_index=True)
+Table_A_4_1_1a_ex.to_csv('./data/photon/Table_A_4_1_1a_photon_fluence_dskin_slab_extend.csv', index=False) 
+
+# dskin_slab - kerma - extend
+minE = min(Table_A_4_1_1b['E_keV'])
+ex_skin_slab = Table_A_4_1_2b[Table_A_4_1_2b['E_keV'] < minE]
+ex_skin_slab.drop(columns=['dskin_pillar_90','dskin_pillar_105','dskin_pillar_120','dskin_pillar_135', 
+                 'dskin_pillar_150','dskin_pillar_165','dskin_pillar_180','dskin_pillar_ROT'],
+                 inplace=True)
+ex_skin_slab.rename(columns={"dskin_pillar_0_Sv/Gy": "dskin_slab_0_Sv/Gy", 
+                   "dskin_pillar_15": "dskin_slab_15",
+                   "dskin_pillar_30": "dskin_slab_30",
+                   "dskin_pillar_45": "dskin_slab_45",
+                   "dskin_pillar_60": "dskin_slab_60",
+                   "dskin_pillar_75": "dskin_slab_75",
+                   }, inplace=True)
+Table_A_4_1_1b_ex = pd.concat([ex_skin_slab, Table_A_4_1_1b], ignore_index=True)
+Table_A_4_1_1b_ex.to_csv('./data/photon/Table_A_4_1_1b_photon_kerma_dskin_slab_extend.csv', index=False) 
