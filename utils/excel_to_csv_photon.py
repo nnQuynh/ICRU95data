@@ -580,7 +580,7 @@ ex = ex.rename(columns={'dskin_pillar_0': 'dskin_slab_0',
                         'dskin_pillar_75': 'dskin_slab_75',})
 Table_A_5_4_1b_ex = pd.concat([ex, Table_A_5_4_1b], ignore_index=True)
 
-outputFile = './data/photon/Table_A_5_4_1b_photon_kerm_dskin_slab_kermaapprox.csv'
+outputFile = './data/photon/Table_A_5_4_1b_photon_kerma_dskin_slab_kermaapprox.csv'
 with open(outputFile, 'w') as f:
     f.write('# Table A.4.1.1.b: Conversion coefficients from photon kerma to directional and personal absorbed dose in local skin on the slab phantom\n')
     f.write('# Energy: keV ; dskin_slab: pGy.cm2\n')
