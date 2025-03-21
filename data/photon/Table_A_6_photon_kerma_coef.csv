@@ -1,4 +1,7 @@
-E_keV,k_pSv.cm2
+# Table A.6: Conversion coefficients from photon fluence to air kerma
+# Energy: keV ; k: pGy.cm2
+# 
+E,k
 2.0,163.7
 3.0,75.32
 4.0,47.62

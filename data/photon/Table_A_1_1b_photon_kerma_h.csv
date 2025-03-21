@@ -1,4 +1,7 @@
-E_keV,h_Sv/Gy
+# Table A.1.1.b: Conversion coefficients from photon air kerma to ambient dose
+# Energy: keV ; h: Sv/Gy
+# 
+E,h
 5.0,0.000437
 6.0,0.000781
 7.0,0.00145

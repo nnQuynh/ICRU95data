@@ -1,4 +1,12 @@
-E_keV,dskin_slab_0_Sv/Gy,dskin_slab_15,dskin_slab_30,dskin_slab_45,dskin_slab_60,dskin_slab_75
+# Table A.4.1.1.b: Conversion coefficients from photon kerma to directional and personal absorbed dose in local skin on the slab phantom
+# Energy: keV ; dskin_slab: pGy.cm2
+# For energy below 10.0 keV, data taken from Table A.5.4.2b (pillar phantom)
+E,dskin_slab_0,dskin_slab_15,dskin_slab_30,dskin_slab_45,dskin_slab_60,dskin_slab_75
+2.0,0.018,0.0158,0.0102,0.00413,0.000667,1.32e-05
+3.0,0.277,0.264,0.225,0.159,0.0758,0.0115
+4.0,0.551,0.539,0.501,0.428,0.301,0.109
+5.0,0.739,0.731,0.704,0.647,0.537,0.298
+7.0,0.902,0.899,0.888,0.861,0.802,0.634
 10.0,0.968,0.966,0.964,0.951,0.931,0.862
 15.0,1.02,1.02,1.02,1.01,1.0,0.976
 20.0,1.09,1.09,1.09,1.08,1.07,1.04
