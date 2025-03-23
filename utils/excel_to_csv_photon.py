@@ -84,7 +84,7 @@ with open(outputFile, 'w') as f:
     f.write('# Table A.2.1b: Conversion coefficients from photon kerma to personal dose \n')
     f.write('# Energy: keV ; hp: Sv/Gy\n')
     f.write('# \n')
-Table_A_2_1a.to_csv(outputFile, mode='a', index=False)
+Table_A_2_1b.to_csv(outputFile, mode='a', index=False)
 
 # dlens - fluence
 Table_A_3_1a = pd.read_excel(excel_photon, sheet_name='A.3.1a-b', skiprows = 2, usecols = 'C:K')
